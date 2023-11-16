@@ -29,7 +29,9 @@ func main() {
 	fmt.Println(cfg)
 
 	log := setupLogger(cfg.Env)
-	log.Info("starting url-shortener", slog.String("env", cfg.Env))
+	log.Info(
+		"starting url-shortener",
+		slog.String("env", cfg.Env))
 	log.Debug("debug logs are enabled")
 	log.Error("error logs are enabled")
 
